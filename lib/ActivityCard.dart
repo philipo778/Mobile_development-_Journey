@@ -1,17 +1,42 @@
 import 'package:flutter/material.dart';
 
-class Activitycard extends StatelessWidget {
-  const Activitycard({super.key});
+class ActivityCard extends StatelessWidget {
+  final String title;
+  final String description;
+  final bool isCompleted;
+  final String priority;
+
+  const ActivityCard({
+    super.key,
+    required this.title,
+    required this.description,
+    required this.isCompleted,
+    required this.priority
+
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: EdgeInsets.all(16),
-      decoration: BoxDecoration(
-          color: Colors.blue.shade100,
-        borderRadius: BorderRadius.circular(12)
+    return Card(
+      child: ListTile(
+        title: Text(title),
+        subtitle: Text(description),
+        trailing: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+              Text(
+              priority
+            ),
+            Icon(
+                isCompleted
+                    ? Icons.check_circle
+                    : Icons.pending_actions
+            ),
+          ]
+        )
+
+
       ),
-        child: const Text("Study Flutter")
     );
   }
 }
