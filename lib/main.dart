@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/screens/profile.dart';
+import 'package:widgets/widgets/task.dart';
 import  'screens/profile_screen.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Profile(),
+      home: UiWidgets(),
 
 
 
