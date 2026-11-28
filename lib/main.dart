@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgets/screens/profile.dart';
 import 'package:widgets/widgets/dashboard.dart';
+import 'package:widgets/widgets/stack.dart';
 import 'package:widgets/widgets/task.dart';
 import  'screens/profile_screen.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Dashboard(),
+      home: StackWidget(),
 
 
 
